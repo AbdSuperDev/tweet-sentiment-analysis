@@ -5,6 +5,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer, SnowballStemmer
 from joblib import load
 import streamlit as st
+import pathlib
 
 # Téléchargement des ressources nécessaires
 nltk.download('stopwords')
@@ -52,11 +53,16 @@ def detect_language(text):
         return "unknown"
 
 
-
+current_dir = pathlib.Path(__file__).parent.resolve()
+data_dir = current_dir.parent / "data"
+model_dir = current_dir.parent / "models"
 
 # Chargement le modèle et le vectoriseur
-model = load("../models/svm_model.joblib")
-vectorizer = load("../models/tfidf_vectorizer.joblib")
+model_path = model_dir / "svm_model.joblib"
+vectorizer_path = model_dir / "tfidf_vectorizer.joblib"
+
+model = load(str(model_path))
+vectorizer = load(str(vectorizer_path))
 
 # Interface utilisateur avec Streamlit
 st.title("Détection de Tweets Suspects (FR/EN)")
