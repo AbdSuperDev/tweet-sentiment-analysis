@@ -1,0 +1,14 @@
+langdetect
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+torch
+nltk
+scikit-learn
+imblearn
+tensorflow
+scikeras
+wordcloud
+joblib
