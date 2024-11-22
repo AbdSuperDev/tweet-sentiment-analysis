@@ -11,7 +11,7 @@ Cette application utilise le NLP et un modèle SVM pour détecter si un tweet en
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/<username>/tweet-sentiment-analysis.git
+   git clone https://github.com/AbdSuperDev/tweet-sentiment-analysis.git
    cd tweet-sentiment-analysis
 Installez les dépendances :
   pip install -r requirements.txt
@@ -21,3 +21,6 @@ Lancez l'application Streamlit :
   
 Ouvrez l'application dans votre navigateur à l'adresse suivante :
   http://localhost:8501
+
+Retrouver la version streamlit :
+   https://tweet-sentiment-analysis-uv.streamlit.app/
